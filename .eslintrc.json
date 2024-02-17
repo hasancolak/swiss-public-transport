@@ -3,7 +3,10 @@
     "sourceType": "module"
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "import", "unicorn"],
+  "plugins": ["@typescript-eslint", "import", "unicorn", "jest"],
+  "env": {
+    "jest/globals": true
+  },
   "extends": [
     "eslint:recommended",
     "next/core-web-vitals",
