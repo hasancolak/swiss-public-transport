@@ -1,9 +1,9 @@
 import { combineSlices, configureStore } from "@reduxjs/toolkit"
 import { setupListeners } from "@reduxjs/toolkit/query"
-import { locationSlice, locationsService } from "../features"
+import { locationSlice, locationsService, connectionsService } from "../features"
 
 // `combineSlices` automatically combines the reducers using their `reducerPath`s
-const rootReducer = combineSlices(locationSlice, locationsService)
+const rootReducer = combineSlices(locationSlice, locationsService, connectionsService)
 
 // Infer the `RootState` type from the root reducer
 export type RootState = ReturnType<typeof rootReducer>
@@ -14,7 +14,7 @@ export const makeStore = (preloadedState?: Partial<RootState>) => {
     reducer: rootReducer,
     // Adding the api middleware enables caching, invalidation, polling, and other useful features of `rtk-query`.
     middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware().concat(locationsService.middleware),
+      getDefaultMiddleware().concat(locationsService.middleware, connectionsService.middleware),
     preloadedState,
   })
   setupListeners(store.dispatch)

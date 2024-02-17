@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   description: "Swiss public transport planner",
 }
 
+/**
+ * @function RootLayout
+ * @param children
+ * @returns JSX.Element
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
