@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import type { ConnectionProps } from "./Connection.types"
 import { getHourAndMinute } from "@/utils"
 import { Detail } from "./Detail"
-import style from "./Connection.module.css"
+import style from "./Connection.module.scss"
 
 /**
  * @function Connection component

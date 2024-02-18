@@ -6,7 +6,7 @@ import { useAppSelector } from "../../store"
 import { selectFrom, selectTo } from "../Locations"
 import { useGetConnectionsQuery } from "./Connections.service"
 import { Connection } from "./Connection"
-import style from "./Connections.module.css"
+import style from "./Connections.module.scss"
 
 /**
  * @function Connections component

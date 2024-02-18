@@ -1,5 +1,5 @@
 import { Connections, Locations } from "../features"
-import styles from "./page.module.css"
+import styles from "./page.module.scss"
 
 /**
  * @function Home is the root page

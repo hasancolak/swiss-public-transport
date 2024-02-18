@@ -1,9 +1,9 @@
 .autocomplete {
   max-width: 540px;
   margin: 0 auto 30px;
-}
 
-.autocomplete > div {
-  width: 100%;
-  min-width: 420px;
+  & > div {
+    width: 100%;
+    min-width: 420px;
+  }
 }

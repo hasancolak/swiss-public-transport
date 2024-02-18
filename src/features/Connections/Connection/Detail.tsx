@@ -1,7 +1,7 @@
 import React from "react"
 import type { DetailProps } from "./Connection.types"
 import { getHourAndMinute } from "../../../utils"
-import style from "./Connection.module.css"
+import style from "./Connection.module.scss"
 
 /**
  * @function Detail component

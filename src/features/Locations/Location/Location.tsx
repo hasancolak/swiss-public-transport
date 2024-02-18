@@ -5,7 +5,7 @@ import TextField from "@mui/material/TextField"
 import type { LocationProps } from "./Location.types"
 import { useGetLocationsQuery } from "../Locations.service"
 import type { LocationItem } from "../Locations.types"
-import style from "./Location.module.css"
+import style from "./Location.module.scss"
 
 /**
  * @function Location component
