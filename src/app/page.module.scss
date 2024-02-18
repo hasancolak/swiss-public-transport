@@ -1,11 +1,20 @@
+@import "../styles/mixin";
+
 .main {
   align-items: center;
-  padding: 24px;
+  padding: var(--space-24);
+  margin: 0 auto;
   min-height: 100vh;
+  max-width: var(--max-width-xl);
+
+  @include sm-screen {
+    max-width: 100%;
+  }
 }
 
 .heading {
   text-align: center;
-  font-size: 24px;
-  margin-bottom: 36px;
+  font-weight: normal;
+  font-size: var(--font-size-24);
+  margin-bottom: var(--space-24);
 }

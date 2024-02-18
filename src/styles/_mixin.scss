@@ -1,0 +1,27 @@
+// X-Small screens
+@mixin xs-screen {
+  @media only screen and (max-width: 543px) {
+    @content;
+  }
+}
+
+// Small screens
+@mixin sm-screen {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+// Medium screens
+@mixin md-screen {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+// Large screens
+@mixin lg-screen {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}

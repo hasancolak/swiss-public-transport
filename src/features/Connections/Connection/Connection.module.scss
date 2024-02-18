@@ -1,14 +1,16 @@
+@import "../../../styles//mixin";
+
 .connection {
   border-color: rgba(0, 0, 0, 0.23);
-  padding: 24px 24px 24px 24px;
+  padding: var(--space-24);
   border: 1px solid #dedede;
-  margin-bottom: 30px;
-  border-radius: 4px;
+  margin-bottom: var(--space-32);
+  border-radius: var(--border-radius-4);
 
   .item {
     display: flex;
-    padding-bottom: 10px;
     position: relative;
+    padding-bottom: var(--space-12);
 
     & .column {
       flex: 1 1 auto;
@@ -20,18 +22,18 @@
     }
 
     & .column > div {
-      padding-bottom: 12px;
+      padding-bottom: var(--space-12);
     }
 
     & .stop {
       position: absolute;
-      left: 100px;
-      right: 100px;
-      top: 65px;
+      left: var(--space-100);
+      right: var(--space-100);
+      top: var(--space-64);
 
       & .transfer {
         text-align: center;
-        padding: 8px 0;
+        padding: var(--space-8) 0;
       }
     }
 
@@ -48,8 +50,8 @@
       &::after {
         content: "";
         display: block;
-        width: 5px;
-        height: 5px;
+        width: var(--space-6);
+        height: var(--space-6);
         top: -2.5px;
         position: absolute;
         background-color: #aaa;
@@ -67,15 +69,24 @@
   }
 
   .sections {
-    padding: 10px 0;
+    padding: var(--space-12) 0;
     width: 100%;
-    margin-top: 24px;
+    margin-top: var(--space-24);
 
     .section {
       display: flex;
-
       border-top: 1px solid #dedede;
-      padding: 24px;
+      padding: var(--space-24);
+
+      @include sm-screen {
+        font-size: var(--font-size-12);
+        padding: var(--space-16);
+      }
+
+      @include md-screen {
+        font-size: var(--font-size-14);
+        padding: var(--space-20);
+      }
 
       & > div {
         flex: 1 1 20%;

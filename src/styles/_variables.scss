@@ -1,0 +1,86 @@
+:root {
+  /* Core units
+     ================================================================= */
+  --base-unit: 0.25rem;
+  --base-half-unit: calc(var(--base-unit) / 2);
+
+  /* Typography
+    ================================================================= */
+  /* Fonts */
+  --font-family-primary: sans-serif;
+  --font-base-unit: var(--base-unit);
+  --code: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  /* Font sizes */
+  --font-size-10: calc(var(--font-base-unit) * 2.5);
+  --font-size-12: calc(var(--font-base-unit) * 3);
+  --font-size-14: calc(var(--font-base-unit) * 3.5);
+  --font-size-16: calc(var(--font-base-unit) * 4);
+  --font-size-20: calc(var(--font-base-unit) * 5);
+  --font-size-24: calc(var(--font-base-unit) * 6);
+  --font-size-40: calc(var(--font-base-unit) * 10);
+  --line-height-base-unit: 1;
+  /* Line heights */
+  --line-height: calc(var(--line-height-base-unit) * 1.5);
+  /* Font weights */
+  --font-weight-light: 200;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  /* Heading */
+  --h1: calc(var(--font-base-unit) * 6);
+
+  /* Width
+     ================================================================= */
+  --max-width: calc(var(--base-unit) * 320); // 1280px
+  --max-width-xl: calc(var(--base-unit) * 205); // 1280px
+  --max-width-md: calc(var(--base-unit) * 160); // 1280px
+  --max-width-sm: calc(var(--base-unit) * 120); // 1280px
+  --autocomplete-max-width: calc(var(--base-unit) * 135); //540px
+
+  /* Space
+     ================================================================= */
+  --space-base-unit: var(--base-unit);
+  /* Margin, Padding */
+  --space-2: calc(var(--space-base-unit) * 0.5);
+  --space-6: calc(var(--space-base-unit) * 1.5);
+  --space-8: calc(var(--space-base-unit) * 2);
+  --space-12: calc(var(--space-base-unit) * 3);
+  --space-16: calc(var(--space-base-unit) * 4);
+  --space-20: calc(var(--space-base-unit) * 5);
+  --space-24: calc(var(--space-base-unit) * 6);
+  --space-32: calc(var(--space-base-unit) * 8);
+  --space-40: calc(var(--space-base-unit) * 10);
+  --space-48: calc(var(--space-base-unit) * 12);
+  --space-64: calc(var(--space-base-unit) * 16);
+  --space-92: calc(var(--space-base-unit) * 23);
+  --space-100: calc(var(--space-base-unit) * 25);
+
+  /* Color
+     ================================================================= */
+  --color-primary: #222222;
+  --color-primary-light: #303030;
+  --color-primary-dark: #090909;
+  --color-secondary: #fffbef;
+  --color-secondary-light: #fefbf0;
+  --color-secondary-dark: #ffeebc;
+  --color-link: #6539aa;
+  --color-link-hover: #3b0394;
+  --color-gray-bg: #f9f9f9;
+  --color-gray-1: #ffffff;
+  --color-gray-2: #eeeeee;
+  --color-gray-3: #d5d5d5;
+  --color-gray-4: #bbbbbb;
+  --color-gray-5: #a1a1a1;
+  --color-gray-6: #888888;
+  --color-gray-7: #6f6f6f;
+  --color-gray-8: #555555;
+  --color-gray-9: #3c3c3c;
+  --color-gray-10: #222222;
+
+  /* Border
+     ================================================================= */
+  /* Border color */
+  --border-color-light: var(--color-gray-3);
+  --border-color: var(---color-gray-5);
+  --border-color-dark: var(--color-gray-7);
+  --border-radius-4: calc(var(--space-base-unit));
+}

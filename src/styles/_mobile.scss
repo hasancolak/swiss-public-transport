@@ -1,0 +1,16 @@
+@import "./mixin";
+
+body {
+  // Large screens (default)
+  font-size: var(--font-size-16);
+
+  // Small screens
+  @include sm-screen {
+    font-size: var(--font-size-12);
+  }
+
+  // Medium screens
+  @include md-screen {
+    font-size: var(--font-size-14);
+  }
+}
