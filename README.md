@@ -38,3 +38,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Isues
+
+- Fix (duplicate): [Using index files for imports causes duplicate CSS in page and layout CSS files](https://www.reddit.com/r/nextjs/comments/17q4yb4/using_index_files_for_imports_causes_duplicate/)

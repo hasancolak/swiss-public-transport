@@ -1,6 +1,6 @@
 import React, { useState } from "react"
+import { getHourAndMinute } from "../../../utils"
 import type { ConnectionProps } from "./Connection.types"
-import { getHourAndMinute } from "@/utils"
 import { Detail } from "./Detail"
 import style from "./Connection.module.scss"
 

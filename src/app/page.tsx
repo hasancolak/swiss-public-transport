@@ -1,5 +1,6 @@
-import { Connections, Locations } from "../features"
+import { Locations } from "@/features/Locations/Locations"
 import styles from "./page.module.scss"
+import { Connections } from "@/features/Connections/Connections"
 
 /**
  * @function Home is the root page

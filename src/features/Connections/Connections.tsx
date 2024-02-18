@@ -3,9 +3,9 @@ import React, { useState } from "react"
 import type { ChangeEvent } from "react"
 import Pagination from "@mui/material/Pagination"
 import { useAppSelector } from "../../store"
-import { selectFrom, selectTo } from "../Locations"
+import { selectFrom, selectTo } from "../Locations/Locations.slice"
 import { useGetConnectionsQuery } from "./Connections.service"
-import { Connection } from "./Connection"
+import { Connection } from "./Connection/Connection"
 import style from "./Connections.module.scss"
 
 /**

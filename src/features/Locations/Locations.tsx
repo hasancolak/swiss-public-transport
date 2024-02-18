@@ -1,9 +1,9 @@
 "use client"
 import React from "react"
 import type { AutocompleteChangeReason } from "@mui/material/useAutocomplete"
-import { useAppDispatch } from "@/store/Hooks"
+import { useAppDispatch } from "../../store/Hooks"
 import { setFrom, setTo } from "./Locations.slice"
-import { Location } from "./Location"
+import { Location } from "./Location/Location"
 import type { LocationItem } from "./Locations.types"
 
 /**

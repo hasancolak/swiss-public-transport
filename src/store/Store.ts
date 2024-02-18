@@ -1,6 +1,8 @@
 import { combineSlices, configureStore } from "@reduxjs/toolkit"
 import { setupListeners } from "@reduxjs/toolkit/query"
-import { locationSlice, locationsService, connectionsService } from "../features"
+import { locationSlice } from "../features/Locations/Locations.slice"
+import { locationsService } from "../features/Locations/Locations.service"
+import { connectionsService } from "../features/Connections/Connections.service"
 
 // `combineSlices` automatically combines the reducers using their `reducerPath`s
 const rootReducer = combineSlices(locationSlice, locationsService, connectionsService)
