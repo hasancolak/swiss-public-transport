@@ -1,44 +1,111 @@
-This project is a public transport planner for Switzerland.
+# Swiss Public Transport Planner
 
-It allows to find the next connections between two addresses within Switzerland. The connections are represented by text (departure & arrival time), including a graphic representation of the travel time and stations to change.
-
-[Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project is a public transport planner for Switzerland. It allows to find the next connections between two addresses within Switzerland. The connections are represented by text (departure & arrival time), including a graphic representation of the travel time and stations to change.
 
 ## Getting Started
 
-First, run the development server:
+### Installation
 
-```bash
-npm run dev
+```sh
+yarn install
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Prepare local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Firs, copy the root `.env.example` file as `.env` file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Run local
 
-## Learn More
+```sh
+yarn dev
+# or
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Visit [http://localhost:3000](http://localhost:3000) with your browser to see running application on local.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Available scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `dev`/`start` - start dev server and open browser
+- `build` - build for production
+- `test` - launch test runner
+- `format` Prettier formater
+- `lint` linting
+- `typecheck` Checks for type
 
-## Deploy on Vercel
+```sh
+yarn dev
+yarn start
+yarn build
+yarn test
+yarn format
+yarn lint
+yarn typecheck
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Visit the deployed app on [hasan-colak-swiss-public-transport.vercel.app](https://hasan-colak-swiss-public-transport.vercel.app/) or run it localy.
+- Type start location into `from` input area.
+- Type end location into `to` input area.
+- The connections result for transport will appear on the screen.
+- Click any connection point to see the detail.
+
+## Architecture and Design
+
+In designing the solution, I aimed for a robust architecture that ensures scalability, maintainability, and reusability of components. I adopted a feature-based structure following the principles of atomic design.
+
+### Feature-Based Structure:
+
+- Each feature of the application is encapsulated within its own directory, containing all related components, styles, test and logic.
+- This approach facilitates easier navigation, isolation of concerns, and allows for better code organization.
+
+### Atomic Design:
+
+- Components are organized into atomic design principles, with atoms representing the smallest building blocks, molecules composing higher-level components.
+- This design methodology promotes component reusability and ensures consistency throughout the application.
+
+### Increased Query Performance (RTK Query)
+
+**Use Case :** Optimizing query performance is crucial for a responsive and efficient application.
+
+**Solution :** RTK Query is utilized to enhance performance through features such as caching, auto-generated query hooks, and automatic cache invalidation. Caching reduces redundant network requests by storing API responses locally, while auto-generated query hooks simplify data fetching and management. Additionally, RTK Query's automatic cache invalidation ensures that data remains up-to-date without manual intervention.
+
+## Followed Coding Standards and Best Practices
+
+- Don't Repeat Yourself (DRY)
+- Separation of Concerns (SoC)
+- SOLID Principles
+- Naming Convention
+- Commenting
+- Type Safety
+- Styling Principles
+- Semantic HTML
 
 ## Isues
 
-- Fix (duplicate): [Using index files for imports causes duplicate CSS in page and layout CSS files](https://www.reddit.com/r/nextjs/comments/17q4yb4/using_index_files_for_imports_causes_duplicate/)
+### Nextjs style duplication bug
+
+- fix(nextjs-duplicate-style): [Using index files for imports causes duplicate CSS in page and layout CSS files](https://www.reddit.com/r/nextjs/comments/17q4yb4/using_index_files_for_imports_causes_duplicate/)
+
+I have fixed that problem withhin the [commit eb57602](https://github.com/hasancolak/swiss-public-transport/commit/eb57602651e2dd9b12ea94c49ba1d6eb9d847632)
+
+## Improvement Points
+
+### Log
+
+Implementing a centralized log component within the React application to monitor application behavior, track errors, and ensure availability.
+
+### Adding integration and end-to-end test
+
+I have configured unit test. It is also necessary to expand the test with integration and End-to-End (E2E) tests to ensure Quality, reduce bugs, facilitate refactoring, and enable continuous integration and delivery.
+
+Integration tests provide confidence that different parts of the application work together harmoniously, detecting issues that may arise from interactions between components or changes in dependencies.
+
+End-to-End tests provide comprehensive coverage and confidence in the overall functionality and usability of the application. E2E tests simulate real user scenarios, interacting with the application as a user would, from the UI to the backend services.
+
+## API Reference
+
+[Swiss public transport API](https://transport.opendata.ch/docs.html)
