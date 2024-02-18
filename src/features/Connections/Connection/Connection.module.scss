@@ -8,6 +8,10 @@
   border-radius: var(--border-radius-4);
   cursor: pointer;
 
+  @include sm-screen {
+    font-size: var(--font-size-12);
+  }
+
   .item {
     display: flex;
     position: relative;
@@ -30,12 +34,28 @@
       position: absolute;
       left: var(--space-100);
       right: var(--space-100);
-      top: var(--space-64);
+      top: var(--space-16);
+
+      @include sm-screen {
+        left: var(--space-48);
+        right: var(--space-48);
+        top: var(--space-24);
+      }
+
+      @include md-screen {
+        left: var(--space-64);
+        right: var(--space-64);
+      }
 
       & .transfer {
         text-align: center;
         padding: var(--space-8) 0;
       }
+    }
+
+    & .duration {
+      text-align: center;
+      margin-bottom: var(--space-8);
     }
 
     & .line {

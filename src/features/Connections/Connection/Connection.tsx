@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { getHourAndMinute } from "../../../utils"
+import { getDuration, getHourAndMinute } from "../../../utils"
 import type { ConnectionProps } from "./Connection.types"
 import { Detail } from "./Detail"
 import style from "./Connection.module.scss"
@@ -8,7 +8,7 @@ import style from "./Connection.module.scss"
  * @function Connection component
  * @returns JSX.Element
  */
-export function Connection({ from, to, sections }: ConnectionProps) {
+export function Connection({ from, to, sections, duration }: ConnectionProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -24,6 +24,7 @@ export function Connection({ from, to, sections }: ConnectionProps) {
           <div>{getHourAndMinute(from?.departure)}</div>
         </div>
         <div className={style.stop}>
+          <div className={style.duration}>{getDuration(duration)}</div>
           <div className={style.line}></div>
           <div className={style.transfer}>{sections?.length} transfer</div>
         </div>

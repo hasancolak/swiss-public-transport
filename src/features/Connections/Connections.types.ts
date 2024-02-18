@@ -43,6 +43,7 @@ export type ConnectionItem = {
   from: From
   to: To
   sections: Sections[]
+  duration: string
 }
 
 /**
