@@ -1,5 +1,8 @@
+export const CONNECTION_INTERNAL_URL = "/connections/api"
+export const LOCATION_INTERNAL_URL = "/locations/api"
+
 // Filter columns for connectios DTO
-export const filterConnectionColumn = [
+export const FILTER_CONNECTION_COLUMN = [
   "duration",
   "from/departure",
   "from/location/name",

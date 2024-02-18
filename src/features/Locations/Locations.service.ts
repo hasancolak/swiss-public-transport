@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 import type { LocationQueryParams, LocationQueryResponse } from "./Locations.types"
+import { LOCATION_INTERNAL_URL } from "@/utils"
 
 /**
  * @function buildQueryString
@@ -15,11 +16,7 @@ const buildQueryString = ({ query }: LocationQueryParams): string =>
  * @returns Json data from service
  */
 export const locationsService = createApi({
-  baseQuery: fetchBaseQuery({
-    // For single usage of api url, I inserted here as string
-    // It is better approach reading this from an .env file or constants resource.
-    baseUrl: "http://localhost:3000/locations/api",
-  }),
+  baseQuery: fetchBaseQuery({ baseUrl: LOCATION_INTERNAL_URL }),
   reducerPath: "locationsApi",
   // Tag types are used for caching and invalidation.
   tagTypes: ["query"],

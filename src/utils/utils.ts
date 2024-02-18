@@ -1,9 +1,9 @@
-import { filterConnectionColumn } from "./constants"
+import { FILTER_CONNECTION_COLUMN } from "./constants"
 
 /**
  * @constant queryFilterBuilder builds query string with given filtered columns
  */
-export const queryFilterBuilder = filterConnectionColumn.reduce(
+export const queryFilterBuilder = FILTER_CONNECTION_COLUMN.reduce(
   (acc, current) => acc + `&fields[]=connections/${current}`
 )
 

@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 import type { ConnectionQueryParams, ConnectionQueryResponse } from "./Connections.types"
+import { CONNECTION_INTERNAL_URL } from "@/utils"
 
 /**
  * @function buildQueryString
@@ -15,11 +16,7 @@ const buildQueryString = ({ from, to, limit, page }: ConnectionQueryParams): str
  * @returns Json data from service
  */
 export const connectionsService = createApi({
-  baseQuery: fetchBaseQuery({
-    // For single usage of api url, I inserted here as string
-    // It is better approach reading this from an .env file or constants resource.
-    baseUrl: "http://localhost:3000/connections/api",
-  }),
+  baseQuery: fetchBaseQuery({ baseUrl: CONNECTION_INTERNAL_URL }),
   reducerPath: "connectionsApi",
   // Tag types are used for caching and invalidation.
   tagTypes: ["from", "to", "page", "limit"],
@@ -33,7 +30,6 @@ export const connectionsService = createApi({
         { type: "from", from },
         { type: "to", to },
       ],
-      transformResponse: (response: ConnectionQueryResponse): ConnectionQueryResponse => response,
     }),
   }),
 })
