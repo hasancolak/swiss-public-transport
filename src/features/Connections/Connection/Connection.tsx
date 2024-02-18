@@ -11,14 +11,13 @@ import style from "./Connection.module.scss"
 export function Connection({ from, to, sections, duration }: ConnectionProps) {
   const [isOpen, setIsOpen] = useState(false)
 
+  const onClick = () => {
+    setIsOpen((prev) => !prev)
+  }
+
   return (
     <div className={style.connection}>
-      <div
-        className={style.item}
-        onClick={() => {
-          setIsOpen((prev) => !prev)
-        }}
-      >
+      <div className={style.item} onClick={onClick} onKeyDown={onClick} role="button" tabIndex={0}>
         <div className={style.column}>
           <div>{from?.location?.name}</div>
           <div>{getHourAndMinute(from?.departure)}</div>

@@ -3,7 +3,7 @@
     "sourceType": "module"
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "import", "unicorn", "jest"],
+  "plugins": ["@typescript-eslint", "import", "unicorn", "jest", "jsx-a11y"],
   "env": {
     "jest/globals": true
   },
@@ -11,6 +11,7 @@
     "eslint:recommended",
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
     "prettier"
   ],
   "rules": {
